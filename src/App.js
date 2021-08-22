@@ -1,11 +1,38 @@
 import React from "react";
-import ExpenseItem from "./ExpenseItem";
+import { Expenses } from "./components/Expenses";
 
 function App() {
+  const expenses = [
+    {
+      id: "a1",
+      date: new Date(2021, 7, 11),
+      name: "Monster Hunter Rise",
+      price: 43,
+    },
+    {
+      id: "a2",
+      date: new Date(2021, 8, 2),
+      name: "Amazing Cultivation Simulator",
+      price: 21,
+    },
+    {
+      id: "a3",
+      date: new Date(2020, 6, 15),
+      name: "Gunfire Reborn",
+      price: 13,
+    },
+    {
+      id: "a1",
+      date: new Date(2021, 6, 22),
+      name: "Rimworld",
+      price: 30,
+    },
+  ];
+
   return (
     <div className="App">
       Ahoy thar!
-      <ExpenseItem text="Thar be some treasurr behind them mountains!" />
+      <Expenses expenses={expenses} />
     </div>
   );
 }
