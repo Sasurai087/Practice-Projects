@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import ExpensesFilter from "./ExpensesFilter";
-import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
+import ExpensesList from "./ExpensesList";
 
+//Props: State with list of expenses from top level App component
 export function Expenses(props) {
-  const [filteredYear, setFilteredYear] = useState("2021");
+  const [filteredYear, setFilteredYear] = useState("All");
+
+  //Filter Logic
   const filteredExpenses = props.expenses.filter((expense) => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
 
+  //Render Logic
+  //Expenses are currently being rendered by ExpensesList component
+
+  //Handler Logic
   const handlePickedYear = (year) => {
     setFilteredYear(year);
   };
@@ -19,14 +26,7 @@ export function Expenses(props) {
         currentYear={filteredYear}
         pickedYear={handlePickedYear}
       />
-      {filteredExpenses.map((element) => (
-        <ExpenseItem
-          name={element.title}
-          date={element.date}
-          price={element.amount}
-          key={element.id}
-        />
-      ))}
+      <ExpensesList expenses={filteredExpenses} />
     </div>
   );
 }

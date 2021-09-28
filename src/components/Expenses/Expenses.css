@@ -6,3 +6,9 @@
   width: 50rem;
   max-width: 95%;
 }
+
+.expenses p{
+  color: white;
+  margin: 2rem auto;
+  padding: 1rem;
+}
