@@ -27,6 +27,30 @@ const DUMMY_EXPENSES = [
     title: "Rimworld",
     amount: 30,
   },
+  {
+    id: "a5",
+    date: new Date(2021, 9, 22),
+    title: "Eneloop AAA Batteries 12 Pack",
+    amount: 20,
+  },
+  {
+    id: "a7",
+    date: new Date(2021, 8, 16),
+    title: "Member's Mark Apple Turnovers",
+    amount: 3.95,
+  },
+  {
+    id: "a8",
+    date: new Date(2022, 6, 6),
+    title: "AAA Car Insurance",
+    amount: 988,
+  },
+  {
+    id: "a9",
+    date: new Date(2020, 6, 22),
+    title: "Galaxy Trucker",
+    amount: 45,
+  },
 ];
 
 function App() {

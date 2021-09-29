@@ -3,7 +3,7 @@ import ExpenseForm from "./ExpenseForm";
 import "./NewExpense.css";
 
 const NewExpense = (props) => {
-  const [formToggle, setFormToggle] = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
@@ -14,18 +14,18 @@ const NewExpense = (props) => {
   };
 
   const toggleForm = () => {
-    setFormToggle(!formToggle);
+    setShowForm(!showForm);
   };
 
   return (
     <div className="new-expense">
-      {formToggle ? (
+      {showForm ? (
         <ExpenseForm
           onSaveExpenseData={saveExpenseDataHandler}
           toggleFormFunction={toggleForm}
         />
       ) : (
-        <button onClick={toggleForm}>Toggle</button>
+        <button onClick={toggleForm}>Add New Expense</button>
       )}
     </div>
   );
