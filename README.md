@@ -7,4 +7,5 @@ Users can add their own expenses by toggling a submission form via the 'Add New 
 
 # To-Do
 Add localstorage
+
 Configurable color scheme
