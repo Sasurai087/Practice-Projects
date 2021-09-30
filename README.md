@@ -6,5 +6,5 @@ Tracks user expenses, filters them by year, and shows a chart indicating which m
 Users can add their own expenses by toggling a submission form via the 'Add New Expense' button at the top, then inputting values into the title, amount, and date fields.
 
 # To-Do
-*Add localstorage
-*Configurable color scheme
+Add localstorage
+Configurable color scheme
